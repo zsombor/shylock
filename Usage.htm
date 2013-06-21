@@ -1,0 +1,283 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+        <title>Shylock, a strong Othello / Reversi program</title>
+        <meta  name="description" content="Othello Reversi program">
+        <meta name="keywords" content="Othello, Reversi, board games, game">
+        <link rel="stylesheet" href="./shylock.css" tppabs="http://www.geocities.com/shylock_the_player/shylock.css" type="text/css">
+    </head>
+    <body>
+        <table cellspacing=0 cellpadding=0 width="100%">
+            <tr>
+                <td bgcolor="#ffffff">
+                    <center>
+                        <a href="http://www.geocities.com/Shylock_The_Player"><img src="logo1.jpg" height=129 width=326 alt="Shylock on the Internet" border=0></a>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <a name="TOC"></a>
+                <h1>Table of contents:</h1>
+                <menu>
+                    <li><a href="#Rules">Rules</a>
+                    <li><a href="#UserInterface">User Interface</a>
+                    <menu>
+                        <li><a href="#BoardPanel">Board Panel</a>
+                        <li><a href="#InfoPanel">Info Panel</a>
+                    </menu>
+                    <li><a href="#GameMenu">Game Menu</a>
+                    <menu>
+                        <li><a href="#GameNew">New</a>
+                        <li><a href="#GameAbort">Abort</a>
+                        <li><a href="#GameSavePosition">Save Position</a>
+                        <li><a href="#GameSaveGame">Save Game</a>
+                        <li><a href="#GameLoadPosition">Load Position</a>
+                        <li><a href="#GameExit">Exit</a>
+                    </menu>
+                    <li><a href="#ActionsMenu">Actions Menu</a>
+                    <menu>
+                        <li><a href="#ActionsHint">Hint</a>
+                        <li><a href="#ActionsSwitchSides">Switch sides</a>
+                        <li><a href="#ActionsUndo">Undo</a>
+                        <li><a href="#ActionsForceMove">Force Move</a>
+                    </menu>
+                    <li><a href="#OptionsMenu">Options Menu</a>
+                    <menu>
+                        <li><a href="#OptionsSearchSettings">Search Settings</a>
+                    </menu>
+                    <li><a href="#HelpMenu">Help Menu</a>
+                    <li><a href="#FAQ">FAQ</a>
+                    <menu>
+                        <li><a href="#HowtoUseTheMouse">How to place discs?</a>
+                        <li><a href="#DoubleMoves">What about those strange board changes?</a>
+                        <li><a href="#TimeUpdates">How is the remaining time measured?</a>
+                        <li><a href="#TimeTrouble">What does it mean "Timed out"?</a>
+                        <li><a href="#OtherPrograms">Other Othello programs.</a>
+                    </menu>
+                    <li><a href="#FairWarning">A fair warning.</a>
+                    <li><a href="#AboutMe">A little about the author.</a> 
+                </menu>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="Rules">Rules of Combat</a></h2>
+                <p> Othello or Reversi is played by two players, namely the 
+Black and the White. They place double sided discs on a board, each disc has 
+one of its side colored black and the other white. The player in turn must 
+place one disc on the board, with his own color facing up. A disc can only 
+be placed if there is an opponent's piece, or a row of opponent's pieces, 
+that are surrounded by your discs. All of the opponent's discs between your 
+discs are then flipped up side down to your color. One can capture discs in 
+horizontal, vertical and diagonal lines even simultaneously. Thus it is 
+possible to flip 18 discs in a single move, tough it is not certain that 
+this is advantageous. </p>
+               <p>The object of the game is to maximize one's final disccount. 
+The player with the most discs is declared the winner. The two players move 
+consecutively, if one has no legal moves than he must pass, otherwise moving
+is compulsory. The game ends  when there are no legal options for either 
+player, this may happen even if the board isn't  filled. </p>
+                <p>Unlike in chess, the right for the first move belongs to 
+Black, however it is more advantageous to play White. Although the final 
+disccount defines the winner, during the game this has no importance what so 
+ever.</p>
+                <cite>"A minute to learn a lifetime to master"</cite>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="UserInterface">User Interface</a></h2>
+                <h3><a name="BoardPanel">Board Panel</a></h3>
+                <p>For your convenience, along the edges of the board you will 
+find the name of the rows and columns, also all legal moves for the side in 
+turn is highlighted.</p>
+                <h3><a name="InfoPanel">Info Panel</a></h3>
+                <p>Using a simple notation, the black player is noted with the 
+plus sign while the white with the minus sign. For example, +d4 means a move 
+for the black player on square d4; also, a game value of -34 means an expected 
+outcome with a discdifference of 34 discs in the favor of the white player. 
+An exclamation point means that a full depth search was performed and the game 
+value vas precisely determined. The panel displays some data about the search 
+and the game. These are the side in turn, the all moves played to this moment, 
+the number of nodes visited during analysis, number of hits in the transposition 
+table, the ratio between these two, number of null window research, search 
+depth, and some other technical data. <strong>You can safely ignore this panel 
+and still enjoy the game!</strong></p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="GameMenu">Game Menu</a></h2>
+                <h3><a name="GameNew">Game/New</a></h3>
+                <p>Starts a new game, if one is already started then a 
+confirmation is required. You are given the choice between playing Black or 
+White.</p>
+                <h3><a name="GameAbort">Game/Abort</a></h3>
+                <p>During a game, you can use the command to abort the game.</p>
+                <h3><a name="GameSavePosition">Game/Save Position</a></h3>
+                <p> Saves the current position, for later analysis.</p>
+                <h3><a name="GameSaveGame">Game/Save Game</a></h3>
+                <p>Records on your hard disc, all moves made, in an easily 
+readable ASCII format, for your bookkeeping purposes. </p>
+                <h3><a name="GameLoadPosition">Game/Load Position</a></h3>
+                <p>Loads a previously saved position, you are given the choice 
+of playing Black or White.</p>
+                <h3><a name="GameExit">Game/Exit</a></h3>
+                <p>Instantaneously exits the program.</p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>    
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="ActionsMenu">Actions Menu</a></h2>
+                (a few commands mainly for your enjoyment.) 
+                <h3><a name="ActionsHint">Actions/Hint</a></h3>
+                <p>Displays a hint (if available) about your best move, though 
+the hint is resulted from a previous search it is quite improbable that you 
+can win a game if all your moves are hinted in this way.</p>
+                <h3><a name="ActionsSwitchSides">Actions/Switch Sides</a></h3>
+                <p>If you feel that the situation is hopeless or lacks the 
+challenge then you might try the game from the opponent's side. For example, 
+you might switch sides in a lost endgame thus wining the match, however you 
+will get no satisfaction from such victory.</p>
+                <h3><a name="ActionsUndo">Actions/Undo</a></h3>
+                <p>If you feel that your last move wasn't what you wanted to 
+be, then you can undo this move.</p>
+                <h3><a name="ActionsForceMove">Actions/Force Move</a></h3>
+                <p>Got tired by Shylock's lengthy thought process? Then you may
+force him to make his move, although a forced move is of a lesser quality.</p>   
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="OptionsMenu">Options Menu</a></h2>
+                <h3><a name="OptionsSearchSettings">Options/Search Settings</a></h3>
+                <p>Customize some search parameters, to make Shylock 
+smarter/dumber. For example, by reducing the search time Shylock might lose due 
+to time troubles, it is possible since the Shylock was designed to use search 
+times of a normal length, like 15 or more minutes.</p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>     
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="HelpMenu">Help Menu</a></h2>
+                <p>You can get a description of the game rules and usage 
+descriptions. You may also admire my nifty about box.</p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="FAQ">FAQ</a></h2>
+                <h3><a name="HowtoUseTheMouse">How to place discs?</a></h3>
+                <p>You are joking, right? Use the left click to place discs, 
+all moves are highlighted.</p>
+<h3><a name="#DoubleMoves">What about that strange board changes?</a></h3>
+                <p>Shylock doesn't cheat, double moves are allowed by the rules. 
+When the opponent hasn't got any move options then he must pass, therefor 
+Shylock can make multiple moves. You can track these by looking at the Info 
+Panel's move list. Though the actual rules state that when one hasn't got any 
+move options then (s)he must inform the other that (s)he passes, in order to 
+reduce the communication overhead between the user, Shylock acts impolitely and 
+simply informs you, with a flash of the application window and by an update on 
+the Info Panel, that you had no options and he had made a double move. 
+Depending on your machine and windows settings you may also hear short beep.</p>
+                <h3><a name="#TimeUpdates">How is the remaining time measured?</a></h3>
+                <p>Although the Info Panel updates are quite hectic, rest assured 
+that the time is measured accurately, since the Info Panel only plays the role of 
+an observer and not of a timekeeper.</p>
+                <h3><a name="#TimeTrouble">What does it mean "Timed out"?</a></h3>
+                <p>It means that Shylock had ran out of its time, thus following 
+the spirit of time control you have won. I like challenges, and for this reason 
+your time is not accounted for, so Shylock is in a more difficult situation since 
+he has to play against an opponent who has unlimited time resources. Of course I 
+am not being fair, for taking your chance of a clear victory by not allowing a 
+game with equal terms.  As soon as some of the other more urgent problems will 
+be solved, an equal time match style will be implemented. Until then try to play 
+with more search time like 15 or more minutes, there should be no problems this 
+way.</p>
+                <h3><a name="OtherPrograms">Other Othello programs</a></h3>
+                <p>There are many of them avaible on the net, some are strong 
+some are not, some have nice graphics some dont (like Shylock). Perhaps the strongest
+Othello program out there is Logistello, who defeated the human world champion by a 
+large margin. Programs like Hannibal, Zebra, Keyano, Kitty, TooThought!, Brutus (...) also have an amazing 
+strength, some of these programs have versions avaible for download, most dont but you can
+play against them and strong humans too, on the GGS (Generic Game Server). It is a generally 
+accepted fact that machines are better at Othello than humans players.
+</p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table> 
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="FairWarning">A fair warning</a></h2>
+                <p>Shylock wasn't built to put up with your personal ego, so 
+if you have a low tolerance ratio for the bitter taste of defeat, you should 
+avoid using it. Failure to do so might result in a severe psychological shock, 
+requiring expensive treatment without any guaranty for a recovery. Shylock 
+shall prevail resistance is futile! <strong>You have been warned!</strong></p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+        <table cellspacing=15 cellpadding=5 width="100%">
+            <tr>
+                <td width="5%"></td>
+                <td width="90%" bgcolor="#d0e9d0">
+                <h2><a name="AboutMe">A little about the author.</a></h2>
+                <p>My name is De&eacute; Zsombor, ex Computer Science student at the 
+Babes-Bolyai University, graduated in July 2002. Currently I'm continuing my studies 
+expecting to take masters degree in component oriented development, by July 2003. My 
+computer science related interests are Standard C++, STL, OOP, OOAD and everything 
+exciting and challenging. Also I enjoy cycling, reading, music and good science fiction 
+works. You can contact me at <a href="mailto:shylock@personal.ro">Shylock@personal.ro</a>.</p>
+                <br><a href="#TOC">top</a>
+                </td>
+                <td width="5%"></td>
+            </tr>
+        </table>
+<a href="http://www.vim.org"><img align="right" alt="edited with Vim" border=0 height=31 width=88 src="vim.vialle.love.anim.gif" ></a>
+</body>
+<!-- made with VIM -->
+</html>

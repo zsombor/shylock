@@ -1,0 +1,89 @@
+body 
+{
+    background : url("./background1.jpg") fixed;
+    margin-left : 0pt;
+    margin-top : 0pt;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 10pt; 
+}
+
+a:link
+{
+    color : #000072;
+}
+
+a:active
+{
+    color : #000072;
+}
+
+a:visited
+{
+    color : #000072;
+}
+
+a:hover
+{
+    color : #0000f0;
+}
+
+p, li, table, td, th
+{
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 10pt;
+}
+
+p
+{
+    text-align : justify;
+    text-indent : 2em;
+    margin : 0px;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-family :  Times, serif;
+}
+
+h1
+{
+    font-size : 18pt;
+    color : #106035;
+    font-weight : bold;
+    margin-top : 0.5em;
+    text-transform : capitalize;
+    letter-spacing : 0.1em;
+    margin-bottom : 0.5em;
+}
+
+h2
+{
+    color : #106035;
+    margin : 0px;
+    font-weight : bold;
+    font-size : 14pt;
+    margin-bottom : 0.5em;
+    margin-top : 0.5em;
+}
+
+h3
+{
+    color : #006633;
+    margin : 0px;
+    font-weight : bold;
+    font-size : 12pt;
+    margin-bottom : 0.5em;
+    margin-top : 0.5em;
+}
+
+strong
+{
+    color : #770000;
+    font-weight : bold
+}
+
+cite
+{
+    text-indent : 2em;
+    font-weight : italic
+}

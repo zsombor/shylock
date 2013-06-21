@@ -1,0 +1,11 @@
+A bunch of reusable classes, mostly win32 specific( except some CRC related)
+
+NOTE:
+
+  These are mostly from the win32 API tutorials from www.relisoft.com. There is 
+a project called WinLib out there with the specific task of encapsulating the
+win32 api in a nice and easy to use C++ class set.  You may wish to check the
+latest state of WinLib, by using the Code Co-op version control system from 
+www.relisoft.com
+
+

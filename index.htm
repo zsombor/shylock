@@ -1,0 +1,123 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+    <title>Shylock, a strong Othello/Reversi program</title>
+    <meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+    <meta content="Othello Reversi program" name=description>
+    <meta content="Othello, Reversi, board games, game, corrections ADO samples" name=keywords>
+    <link rel="stylesheet" href="./shylock.css" type=text/css tppabs="http://www.geocities.com/shylock_the_player/shylock.css">
+</head>
+<body>
+<table cellPadding=0 cellSpacing=0 width="100%">
+    <tr>
+        <td bgColor=#ffffff>
+            <center><img alt="Shylock's home page" border=0 height=129 src="logo1.jpg" width=326></center>
+        </td>
+    </tr>
+</table>
+<table cellPadding=5 cellSpacing=15 width="100%">
+    <tr>
+        <td width="5%"></td>
+        <td bgColor=#d0e9d0 width="90%">
+            
+        <h2>The program.</h2>
+            
+        <p><strong>Shylock </strong>is an artificial entity, a strong Reversi 
+        player a game popularly known as Othello. </p><br>
+        
+        <p>Shylock's engine uses a self-learned evaluation function, modern 
+        algorithms like the MTD(f) invented by Askee Plaat. Move ordering is 
+        improved using killer moves, history heuristic, and by iterative deepening 
+        with a large transposition table. Also, there is an opening book, 
+        containing all known variations.</p>
+        
+        <p>Shylock is fully object oriented, with an engine written in pure C++, a 
+        GUI built with a simple yet powerful OO encapsulation of the Win32 API (no 
+        MFC, no OWL, no crap). I've used the advanced concepts presented by 
+        Bartosz Milewski in his book <cite>C++ In Action. Industrial Strength 
+        Programming Techniques</cite>.</p>
+        
+        <h3>User's documentation:</h3>
+        <ul>
+            <li><a href="screen1.jpg">A screenshot</a></li>
+            <li><a href="Usage.htm">Read the help file</a></li>
+        </ul>
+        
+        <h3>Platform requirements.</h3>
+        
+        <p>This version of Shylock is written for the Win32 platform, thus it can 
+        run on Windows 95, 98, Me, NT 4.0, Windows 2000 and XP. You will also need 
+        a fair amount of RAM; 64 Mb is more than enough, however by changing 
+        search options you can get away with 16 Mb or even less.</p></td>
+        <td width="5%"></td>
+    </tr>
+</table>
+<table cellPadding=5 cellSpacing=15 width="100%">
+    <tr>
+        <td width="5%"></td>
+        <td bgColor=#d0e9d0 width="90%">
+        <h2>Download area</h2>
+        
+        <p>This project was written explicitly for selfimprovement and since this 
+        can't be achieved without feedback I'm inviting you to take a peak into 
+        Shylock's source. I hope that you will find it to be readable, understandable
+        and generaly enjoyable, so here it is: <a href="latest_source.zip">The Source</a>
+        (last update Nov, 2002). For your viewing pleasure you can also download the 
+        the doxygen generated <a href="latest_doc.tar.gz">developer's documentation</a>.</p>
+        
+        <p>You are welcome to download and use the <a href="shylocksetup.zip">binaries</a>
+        (last update Nov, 2002). The filesize is motivated mainly by a large amount 
+        of precomputed data, the actual executable is quite small. Optionaly there is 
+        a an opening book available for download <a href="booksetup.zip">here</a>
+        (last update May, 2002), the presence of this file in the install directory 
+        will improve the performace of the system. To save your time and bandwidth you 
+        may download the <a href="latest_executable.zip">latest executable</a> 
+        (last update Nov, 2002) just extract it and replace your previous executable. 
+        <strong>Please note</strong> that you must download  the binaries, with the 
+        latest executable option you can only do an update of a previous install. Also 
+        to obtain a runnable system from the sources you will need some files distributed
+        in a binary install.</p></td>
+    
+        <td width="5%"></td>
+    </tr>
+</table>
+<table cellPadding=5 cellSpacing=15 width="100%">
+    <tr>
+        <td width="5%"></td>
+        <td bgColor=#d0e9d0 width="90%">
+            
+        <h3>Project notes</h3>
+        <p>Shylock is under development some features aren't yet implemented, 
+        while others are disabled for further testing or to ease the debugging 
+        process. Some of these are: 
+        <ul>
+            <li>'Think in opponent time' - disabled </li>
+            <li>Selective extensions - not implemented </li>
+            <li>Opening book - isn't updated in the downloadable version </li>
+            <li>Move undo - not implemented </li>
+        </ul></p></td>
+    
+        <td width="5%"></td>
+    </tr>
+</table>
+<table cellPadding=5 cellSpacing=15 width="100%">
+    <tr>
+        <td width="5%"></td>
+        <td bgColor=#d0e9d0 width="90%">
+        <h3>Other articles</h3>
+        <p>You can read other, definetly non-Othello related articles here.
+        <ul>
+          <li>Corrections to the MSDN library, all articles under the "ADO Code Examples in Microsoft Visual C++" tree. Read
+              <a href="corrections.htm">more</a>.
+         </li>
+         <li>Do you have a lot of complaints regarding the so called standard expectations form
+         your profession? Well there is no reason to be so, just take my
+             <a href="false.htm">"example"</a>.
+         </li>
+        </ul></p></td>
+        <td width="5%"></td>
+    </tr>
+</table>
+<a href="http://www.vim.org"><img align="right" alt="edited with Vim" border=0 height=31 width=88 src="vim.vialle.love.anim.gif" ></a>
+</body>
+</html>

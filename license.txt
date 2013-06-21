@@ -1,0 +1,7 @@
+Copyright (C) 2001-2002 Dee Zsombor
+
+  This software is provided 'as-is', without any express or implied warranty.  In no event will the author be held liable for any damages arising from the use of this software.
+
+  The author grants you a personal, limited, non-exclusive right to use this software program at your own risk. However you are not permitted to lease or rent, sublicense this software program or use it in any manner that may generate financial revenue. You may not enter this program in any organized tournament where it would compete with other programs or players, unless the programs origin is clearly specified. All exceptions must be dealt by separate mutually agreeable terms set forth in writing.
+
+OTHELLO is a registered trade mark of Tsukuda Original, licensed by Anjar Co.";
